@@ -1,0 +1,14 @@
+.container{
+    background-color: rgb(230, 204, 204);
+    border: 1px solid black;
+    width: 300px;
+    height: 260px;
+    margin: 0px 600px;
+}
+.form{
+    padding: 10px 20px;
+}
+input{
+    margin:8px 4px;
+    padding: 5px;
+}

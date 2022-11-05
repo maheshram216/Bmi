@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="hi"></h1>
+        <form class="form" name="formdata">
+            <label>Age <input type="number" min="2" max="120" required> <span>ages: 2-120</span></label><br>
+            <label>Gender
+                <input type="radio" value="male" id="male">
+                <label for="male">Male</label>
+                <input type="radio" value="female" id="female">
+                <label for="female">Female</label>
+            </label> <br>
+            <label>Height<input id="height" type="text" placeholder="cm" required></label> <br>
+            <label>Weight<input id="mass" type="text" placeholder="kg" required></label> <br>
+            <input type="button" value="Calculate" id="calculate" onclick="Calculate()">
+            <input type="button" value="Clear" id="clear" onclick="Clear()">
+        </form>
+    </div>
+</body>
+<script>
+    const height = document.body.querySelector("#height")
+    const mass = document.body.querySelector("#mass")
+
+    const Calculate = () => {
+        if (isNaN(height.value) || isNaN(mass.value)) {
+            alert("enter a number");
+        }
+        if (height <= 0 || mass <= 0) {
+            alert("enter positive number");
+        }
+        return height / mass
+    }
+
+    console.log(Calculate());
+
+    const Clear = ()=>{
+        height.value =""
+        mass.value =""
+    }
+</script>
+
+</html>
